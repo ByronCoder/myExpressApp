@@ -7,7 +7,7 @@ on:
 env:
   AZURE_RESOURCE_GROUP: actions-webapp-rg
   AZURE_APP_PLAN: actions-asp
-  AZURE_LOCATION: '"Central US"'
+  AZURE_LOCATION: '"East US"'
   AZURE_WEBAPP_NAME: node-3152024
 
 jobs:
