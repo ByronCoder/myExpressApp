@@ -36,8 +36,7 @@ jobs:
       - name: Create webapp resource
         if: success()
         run: |
-          az webapp create -g ${{ env.AZURE_RESOURCE_GROUP }} -p ${{ env.AZURE_APP_PLAN }} -n ${{ env.AZURE_WEBAPP_NAME }} --runtime "node|20.11.1" --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}}
-
+          az webapp create --name ${{ env.AZURE_WEBAPP_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} ${{ env.AZURE_APP_PLAN }} --runtime "NODE|20-LTS"
   destroy-azure-resources:
     runs-on: ubuntu-latest
 
